@@ -30,5 +30,6 @@ FILE(GLOB LIBICP_SRC_FILES "src/*.cpp")
 set(CMAKE_BUILD_TYPE Release)
 
 # build demo program
-add_executable(icp ${LIBICP_SRC_FILES})
+add_executable(icp src/demo.cc ${LIBICP_SRC_FILES})
+add_library(libicp STATIC ${LIBICP_SRC_FILES})
 
